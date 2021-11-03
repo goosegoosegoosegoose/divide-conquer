@@ -13,20 +13,12 @@ function findRotatedIndex(arr, num) {
     } else if (rightVal === num) {
       return middleIdx + 1;
     } else if (middleVal > num && middleVal > rightVal && median < num) {
-      console.log(`middleVal is ${middleVal}`);
-      console.log(`middleIdx is ${middleIdx}`);
       rightIdx = middleIdx - 1;
     } else if (middleVal > num && middleVal > rightVal && median > num) {
-      console.log(`middleVal is ${middleVal}`);
-      console.log(`middleIdx is ${middleIdx}`);
       leftIdx = middleIdx + 1;
     }  else if (middleVal < num && middleVal < rightVal) {
-      console.log(`middleVal is ${middleVal}`);
-      console.log(`middleIdx is ${middleIdx}`);
       leftIdx = middleIdx + 1;
     } else if (middleVal > num && middleVal < rightVal) {
-      console.log(`middleVal is ${middleVal}`);
-      console.log(`middleIdx is ${middleIdx}`);
       rightIdx = middleIdx - 1;
     }
   }
