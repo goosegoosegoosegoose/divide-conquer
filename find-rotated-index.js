@@ -12,6 +12,8 @@ function findRotatedIndex(arr, num) {
       return middleIdx;
     } else if (rightVal === num) {
       return middleIdx + 1;
+    } else if (middleVal < num && middleVal > rightVal) {
+      return -1
     } else if (middleVal > num && middleVal > rightVal && median < num) {
       rightIdx = middleIdx - 1;
     } else if (middleVal > num && middleVal > rightVal && median > num) {
